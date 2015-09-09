@@ -7,4 +7,4 @@ C#版FixDemo 基于第三方开源QuickFixN，如因开源代码BUG 导致任何
 2、AccountUtil
    1)apiKey 为用户申请api_key
    2)sercretKey 为用户申请sercret_key
-3、拷贝 config 到 bin/Debug /bin/Release
+3、拷贝 config目录 到 bin/Debug /bin/Release
