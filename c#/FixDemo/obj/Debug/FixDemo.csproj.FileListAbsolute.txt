@@ -1,0 +1,8 @@
+D:\visual studio 2010\workspace\FixDemo\FixDemo\bin\Debug\FixDemo.exe.config
+D:\visual studio 2010\workspace\FixDemo\FixDemo\bin\Debug\FixDemo.exe
+D:\visual studio 2010\workspace\FixDemo\FixDemo\bin\Debug\FixDemo.pdb
+D:\visual studio 2010\workspace\FixDemo\FixDemo\bin\Debug\QuickFix.dll
+D:\visual studio 2010\workspace\FixDemo\FixDemo\bin\Debug\QuickFix.pdb
+D:\visual studio 2010\workspace\FixDemo\FixDemo\obj\Debug\FixDemo.csprojResolveAssemblyReference.cache
+D:\visual studio 2010\workspace\FixDemo\FixDemo\obj\Debug\FixDemo.exe
+D:\visual studio 2010\workspace\FixDemo\FixDemo\obj\Debug\FixDemo.pdb

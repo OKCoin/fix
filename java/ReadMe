@@ -1,0 +1,8 @@
+#使用需知
+1、配置quickfix-client.properties
+  SenderCompID 需要配置为唯一一个值，建议使用UUID，注意一个示例使用一个即可。
+2、配置AccountUtil.java
+      将申请apiKey 和 sercretKey 分别赋值给对应属性
+3、OKClientApplication 配置
+       在onLogon 方法中注册相应请求数据
+4、运行OKClient Main 方法即时可以通信
