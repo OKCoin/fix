@@ -1,9 +1,10 @@
-ÃâÔğÉùÃ÷£º
-C#°æFixDemo »ùÓÚµÚÈı·½¿ªÔ´QuickFixN£¬ÈçÒò¿ªÔ´´úÂëBUG µ¼ÖÂÈÎºÎÎÊÌâ£¬OKCoin¸Å²»¸ºÔğ¡£ËùÒÔÇëÓÃ»§ÈÏÕæ²âÊÔºóÔÚÊ¹ÓÃ£¬ÌØ´ËÉùÃ÷¡£
-Ê¹ÓÃËµÃ÷:
-1¡¢config/quickfix-client.cfg ÎªFIX ÅäÖÃÎÄ¼ş£¬ÒÔÏÂÎªÖØÒªÅäÖÃ½âÊÍ
-   1)SenderCompID FIXClient Î¨Ò»±êÊ¾½¨ÒéÊ¹ÓÃUUID
-   2)SocketConnectHost ¹úÄÚÕ¾ÓÃ»§ÅäÖÃÎªapi.okcoin.cn ¹ú¼ÊÕ¾ÓÃ»§ÅäÖÃÎªapi.okcoin.com
-2¡¢AccountUtil
-   1)apiKey ÎªÓÃ»§ÉêÇëapi_key
-   2)sercretKey ÎªÓÃ»§ÉêÇësercret_key
+å…è´£å£°æ˜ï¼š
+C#ç‰ˆFixDemo åŸºäºç¬¬ä¸‰æ–¹å¼€æºQuickFixNï¼Œå¦‚å› å¼€æºä»£ç BUG å¯¼è‡´ä»»ä½•é—®é¢˜ï¼ŒOKCoinæ¦‚ä¸è´Ÿè´£ã€‚æ‰€ä»¥è¯·ç”¨æˆ·è®¤çœŸæµ‹è¯•ååœ¨ä½¿ç”¨ï¼Œç‰¹æ­¤å£°æ˜ã€‚
+ä½¿ç”¨è¯´æ˜:
+1ã€config/quickfix-client.cfg ä¸ºFIX é…ç½®æ–‡ä»¶ï¼Œä»¥ä¸‹ä¸ºé‡è¦é…ç½®è§£é‡Š
+   1)SenderCompID FIXClient å”¯ä¸€æ ‡ç¤ºå»ºè®®ä½¿ç”¨UUID
+   2)SocketConnectHost å›½å†…ç«™ç”¨æˆ·é…ç½®ä¸ºapi.okcoin.cn å›½é™…ç«™ç”¨æˆ·é…ç½®ä¸ºapi.okcoin.com
+2ã€AccountUtil
+   1)apiKey ä¸ºç”¨æˆ·ç”³è¯·api_key
+   2)sercretKey ä¸ºç”¨æˆ·ç”³è¯·sercret_key
+3ã€æ‹·è´ config åˆ° bin/Debug /bin/Release
