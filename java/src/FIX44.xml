@@ -104,6 +104,104 @@
       <field name="Currency" required="N"/>
       <field name="Balance" required="N"/>
     </message>
+    <message name="FutureSubNews" msgtype="Z2001" msgcat="app">
+      <field name="NewsType" required="N"/>
+      <field name="SecurityType" required="N"/>
+    </message>
+    <message name="FutureSubNewsResponce" msgtype="Z2002" msgcat="app">
+      <field name="NewsType" required="N"/>
+      <field name="SubTips" required="N"/>
+      <field name="Text" required="N"/>
+    </message>
+    
+    <message name="TradeOrdersAfterOneID" msgtype="Z2000" msgcat="app">
+      <field name="Symbol" required="N"/>
+      <field name="OrderID" required="N"/>
+      <field name="OrdStatus" required="N"/>
+      <field name="TradeRequestID" required="N"/>
+      <field name="TradeRequestType" required="N"/>
+      <field name="PageNO" required="N"/>
+      <field name="StrikeCurrency" required="N"/>
+      <field name="SecurityType" required="N"/>
+    </message>
+    	
+     <message name="FuturePositionsResponse" msgtype="Z3001" msgcat="app">
+      <field name="Currency" required="N"/>
+      <field name="Symbol" required="N"/>
+      
+      <group name="NoUserPostion" required="N">
+      	<field name="Symbol" required="Y"/>
+      	<field name="ContractID" required="N"/>
+       	<field name="AvgPx" required="N"/>
+	    <field name="OrderQty" required="N"/>
+        <field name="ContractName" required="N"/>
+        <field name="Price" required="N"/>
+        <field name="StopPx" required="N"/>
+        <field name="Side" required="N"/>
+        <field name="Balance" required="N"/>
+        <field name="PositionRealProfit" required="N"/>
+        <field name="MarginRatio" required="N"/>
+        <field name="FrozenAmt" required="N"/>
+        <field name="MarginCash" required="N"/>
+        <field name="PositionType" required="N"/>
+        <field name="PositionsID" required="N"/>
+        <field name="Eveningup" required="N"/>
+      </group>
+    </message>
+    
+    <message name="FutureTradesResponse" msgtype="Z3002" msgcat="app">
+      <field name="OrderID" required="N"/>
+      <field name="Symbol" required="N"/>
+      <field name="AvgPx" required="N"/>
+      <field name="Balance" required="N"/>
+      <field name="FrozenAmt" required="N"/>
+      <field name="Price" required="N"/>
+      <field name="StopPx" required="N"/>
+      <field name="Side" required="N"/>
+      <field name="PositionRealProfit" required="N"/>
+      <field name="MarginCash" required="N"/>
+      <field name="OrderQty" required="N"/>
+      <field name="PositionsID" required="N"/>
+      <field name="Currency" required="N"/>
+      <field name="PositionType" required="N"/>
+      <field name="MarginRatio" required="N"/>
+      <field name="ExecID" required="N"/>
+      <field name="ExDate" required="N"/>
+      <field name="CumQty" required="N"/>
+      <field name="Commission" required="N"/>
+      <field name="OrdStatus" required="N"/>
+      <field name="AmountUnit" required="N"/>
+      <field name="Text" required="N"/>
+      <field name="ContractName" required="N"/>
+      <field name="PositionType" required="N"/>  
+      <field name="PositionsID" required="N"/>
+    </message>
+    
+     <message name="FutureUserInfoResponse" msgtype="Z3003" msgcat="app">
+      <field name="Balance" required="N"/>
+      <field name="MarginRatio" required="N"/>
+      <field name="MarginCash" required="N"/>
+      <field name="PositionRealProfit" required="N"/>
+      <field name="PositionUNProfit" required="N"/>
+      <field name="AccountRights" required="N"/>
+      <field name="Currency" required="N"/>
+      <group name="NoUser4fixContracts" required="N">
+      	<field name="Symbol" required="Y"/>
+      	<field name="ContractID" required="N"/>
+      	<field name="Currency" required="N"/>
+      	<field name="Balance" required="N"/>
+      	<field name="AccountRights" required="N"/>  
+      	<field name="Available" required="N"/>  
+      	<field name="PositionRealProfit" required="N"/>
+      	<field name="MarginCash" required="N"/>  
+      	<field name="MarginRatio" required="N"/>  
+      	<field name="PositionUNProfit" required="N"/>
+      	<field name="FrozenAmt" required="N"/>
+      </group>
+    </message>
+    
+
+    
     <message name="BusinessMessageReject" msgtype="j" msgcat="app">
       <field name="RefSeqNum" required="N"/>
       <field name="RefMsgType" required="Y"/>
@@ -113,6 +211,7 @@
       <field name="EncodedTextLen" required="N"/>
       <field name="EncodedText" required="N"/>
     </message>
+    
     <message name="UserRequest" msgtype="BE" msgcat="app">
       <field name="UserRequestID" required="Y"/>
       <field name="UserRequestType" required="Y"/>
@@ -788,6 +887,7 @@
   <message name="MarketDataSnapshotFullRefresh" msgtype="W" msgcat="app">
     <field name="OrigTime" required="Y"/>
     <field name="MDReqID" required="N"/>
+    <field name="Currency" required="N"/> 
     <component name="Instrument" required="Y"/>
     <group name="NoUnderlyings" required="N">
       <component name="UnderlyingInstrument" required="N"/>
@@ -839,7 +939,7 @@
   </message>
   <message name="MarketDataIncrementalRefresh" msgtype="X" msgcat="app">
     <field name="MDReqID" required="N"/>
-	<field name="Symbol" required="Y"/>
+    <field name="Symbol" required="Y"/>
     <group name="NoMDEntries" required="Y">
       <field name="MDUpdateAction" required="Y"/>
       <field name="DeleteReason" required="N"/>
@@ -3677,6 +3777,24 @@
     <field name="EncodedTextLen" required="N"/>
     <field name="EncodedText" required="N"/>
   </message>
+  
+   <message name="NetworkStatusResponse" msgtype="BD" msgcat="app">
+    <field name="NetworkStatusResponseType" required="Y" />
+    <field name="NetworkRequestID" required="N" />
+    <field name="NetworkResponseID" required="N" />
+    <field name="LastNetworkResponseID" required="N" />
+    <group name="NoCompIDs" required="Y">
+      <field name="RefCompID" required="N" />
+      <field name="RefSubID" required="N" />
+      <field name="LocationID" required="N" />
+      <field name="DeskID" required="N" />
+      <field name="StatusValue" required="N" />
+      <field name="StatusText" required="N" />
+    </group>
+  </message>
+  
+  
+  
   </messages>
   <components>
     <component name="Instrument">
@@ -4235,6 +4353,11 @@
       <value enum="E1000" description="ERROR"/>
       <value enum="Z1000" description="USERINFO_REQUEST"/>
       <value enum="Z1001" description="USERINFO_RESPONSE"/>
+      <value enum="Z2000" description="USER_ORDER_AFTER_SOMEID"/>
+      <value enum="Z2001" description="FutureSubNews"/>
+      <value enum="Z2002" description="FutureSubNewsResponce"/>
+      <value enum="Z3001" description="FuturePositionsResponse"/>
+      <value enum="Z3003" description="FutureUserInfoResponse"/>
     </field>
     <field number="36" name="NewSeqNo" type="SEQNUM"/>
     <field number="37" name="OrderID" type="STRING"/>
@@ -6828,5 +6951,26 @@
     <field number="8001" name="Balance" type="STRING"/>
     <field number="8500" name="ErrorMessageLogout" type="INT"/>
     <field number="8600" name="ExceptionMessage" type="STRING"/>
+    
+    <field number="8201" name="AccountRights" type="STRING"/>
+    <field number="8202" name="Available" type="STRING"/>
+    <field number="8203" name="PositionRealProfit" type="STRING"/>
+    <field number="8204" name="KeepDeposit" type="STRING"/>
+	<field number="8205" name="MarginRate" type="STRING"/>    
+    <field number="8206" name="PositionUNProfit" type="STRING"/>
+    <field number="8207" name="FrozenAmt" type="STRING"/>
+    <field number="8208" name="MarginCash" type="STRING"/>
+    <field number="8209" name="PositionsID" type="STRING"/>
+	<field number="8210" name="PositionType" type="STRING"/>
+	<field number="8211" name="AmountUnit" type="STRING"/>
+	<field number="8212" name="ContractName" type="STRING"/>
+	<field number="8213" name="ContractID" type="STRING"/>
+	<field number="8214" name="PageNO" type="STRING"/>
+	<field number="8215" name="Eveningup" type="STRING"/>
+	<field number="8216" name="NewsType" type="STRING"/>
+	<field number="8217" name="SubTips" type="BOOLEAN"/>
+	
+	<field number="8302" name="NoUser4fixContracts" type="NUMINGROUP"/>
+	<field number="8303" name="NoUserPostion" type="NUMINGROUP"/>
   </fields>
 </fix>
