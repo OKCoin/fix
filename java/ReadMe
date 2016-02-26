@@ -6,3 +6,14 @@
 3、OKClientApplication 配置
        在onLogon 方法中注册相应请求数据
 4、运行OKClient Main 方法即时可以通信
+
+
+
+【2016年2月26日下午15时更新】
+
+	新增OKFIX合约支持DEMO
+
+	！！注意！！
+
+	如果需要获取FIX合约服务，请及时更新字典文件FIX4.4.XML（DEMO中已更新最新XML）
+
