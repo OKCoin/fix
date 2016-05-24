@@ -49,7 +49,7 @@ public class OKFutureTradingRequest {
 		
 		quickfix.fix44.NewOrderSingle newOrderSingleRequest = new quickfix.fix44.NewOrderSingle();
 		
-		newOrderSingleRequest.set(new Account("apiKey,SECRET_KEY"));
+		newOrderSingleRequest.set(new Account(AccountUtil.apiKey+","+AccountUtil.sercretKey));
 		newOrderSingleRequest.set(new ClOrdID("qsd"));
 		newOrderSingleRequest.set(new OrderQty(1));
 		newOrderSingleRequest.set(new OrdType(OrdType.LIMIT));
